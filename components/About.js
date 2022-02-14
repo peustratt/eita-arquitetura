@@ -26,6 +26,7 @@ export default function About() {
                     align-items: center;
                     gap: 2em;
                 }
+            
                 img {
                     width: 100%;
                     height: 100%;
@@ -39,6 +40,11 @@ export default function About() {
                     flex-direction: column;
                     gap: 1.5em;
                     padding: 0 1.5em;
+                }
+                @media (max-width: 700.91px) {
+                    .conteudo {
+                        grid-row: 1;
+                    }
                 }
                 h3 {
                     position: relative;
