@@ -3,7 +3,7 @@ export default function About() {
         <>
             <div className="about-us">
                 <div className="container">
-                    <img src='./images/team-photo.jpg'></img>
+                    <img src='./images/team-photo.jpg' alt="time eita arquitura"></img>
                     <div className="conteudo">
                         <h3>Quem somos</h3>
                         <p>Lorem i et dolore magna aliqucitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>

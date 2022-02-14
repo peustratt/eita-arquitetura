@@ -10,7 +10,7 @@ export default function Project(props) {
                     <p>Lorem i et dolore magna aliqucitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                 </div>
                 <div className="img-wrapper">
-                    <img src={props.image}></img>
+                    <img src={props.image} alt="demonstração do projeto"></img>
                 </div>
             </div>
 
@@ -23,7 +23,7 @@ export default function Project(props) {
                 }
                 .img-wrapper {
                     order: 2;
-                    background-image: url("./images/sala-de-estar.jpg");
+                    background-image: url(./images/sala-de-estar.jpg);
                     background-size: cover;
                     background-position: center;
                     transition: 5s;
@@ -38,10 +38,10 @@ export default function Project(props) {
 
                 @keyframes animate {
                     0% {
-                        background-image: url("./images/sala-de-estar.jpg");
+                        background-image: url(./images/sala-de-estar.jpg);
                     }
                     100% {
-                        background-image: url("./images/podcast.jpg");
+                        background-image: url(./images/podcast.jpg);
                     }
                 }
                 img {
