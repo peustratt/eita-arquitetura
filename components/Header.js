@@ -26,6 +26,8 @@ export default function Header() {
                     height: 55px;
                     background-color: var(--clr-primary);
                     padding: 0 2em;
+                    font-family: var(--ff-secondary);
+                    box-shadow: var(--bs)
                 }
                 nav {
                     margin: 0 auto;
@@ -37,6 +39,7 @@ export default function Header() {
                 }
                 img {
                     width: 80px;
+                    margin-bottom: 7px;
                 }
                 ul {
                     display: flex;
@@ -45,6 +48,7 @@ export default function Header() {
                 }
                 .orcamento {
                     font-size: 20px;
+                    margin-left: 10px;
                 }
                 .nav-toggle {
                     display: none;
@@ -53,7 +57,7 @@ export default function Header() {
                     width: 50px;
                 }
 
-                @media (max-width: 700px) {
+                @media (max-width: 600px) {
                     .nav-toggle {
                         display: block;
                     }

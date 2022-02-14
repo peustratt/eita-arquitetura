@@ -3,7 +3,7 @@ export default function About() {
         <>
             <div className="about-us">
                 <div className="container">
-                    <img src='./images/time.png'></img>
+                    <img src='./images/team-photo.jpg'></img>
                     <div className="conteudo">
                         <h3>Quem somos</h3>
                         <p>Lorem i et dolore magna aliqucitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
@@ -15,7 +15,7 @@ export default function About() {
             <style jsx>{`
                 .about-us {
                     padding: 3rem 2rem;
-                    background: #f9f9f9;
+                    background: var(--clr-bg-light);
                 }
 
                 .container {
@@ -30,36 +30,51 @@ export default function About() {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    border-radius: 10px;
+                    border-radius: 2px;
+                    box-shadow: var(--bs-dark);
                 }
                 .conteudo {
                     height: 100%;
                     display: flex;
                     flex-direction: column;
                     gap: 1.5em;
-                    justify-content: space-between;
                     padding: 0 1.5em;
                 }
                 h3 {
+                    position: relative;
+                    width: fit-content;
                     font-size: clamp(1.5rem, 2.5vw, 2.2rem);
                 }
+                h3::after {
+                    content: '';
+                    width: 2.8em;
+                    height: .15em;
+                    position: absolute;
+                    top: 1.6em;
+                    left: 0;
+                    margin-left: 50%;
+                    transform: translatex(-50%);
+                    background: var(--clr-dark);
+                    opacity: .5;
+                }
                 p {
-                    font-size: clamp(1em, 2vw, 3.5em)
+                    font-size: clamp(1.2em, 1.7vw, 2em)
                 }
                 button {
-                    padding: .1em .5em;
+                    padding: .2em 1em;
                     display: flex;
                     align-items: center;
                     width: fit-content;
-                    font-size: clamp(1rem, 1.5vw, 2rem);
+                    font-size: clamp(1rem, 1.7vw, 2.5rem);
                     border: 0;
-                    background-color: orange;
+                    background-color: var(--clr-primary-light);
                     border-radius: 3px;
+                    margin-top: auto;
                 }
                 i {
                     margin-right: 10px;
-                    color: gray;
-                    font-size: clamp(1em, 3vw, 3.5em)
+                    color: #7E7E7E;
+                    font-size: clamp(1.7em, 3.8vw, 3em);
                 }
             `}</style>
         </>
