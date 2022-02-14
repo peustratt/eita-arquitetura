@@ -9,7 +9,9 @@ export default function Project(props) {
                     <h3>Sala de estar</h3>
                     <p>Lorem i et dolore magna aliqucitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                 </div>
-                <img src={props.image}></img>
+                <div className="img-wrapper">
+                    <img src={props.image}></img>
+                </div>
             </div>
 
             <style jsx>{`
@@ -19,11 +21,34 @@ export default function Project(props) {
                     max-width: 1200px;
                     margin: 0 auto;
                 }
+                .img-wrapper {
+                    order: 2;
+                    background-image: url("./images/sala-de-estar.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    transition: 5s;
+
+                    animation-name: animate;
+                    animation-direction: alternate-reverse;
+                    animation-duration: 5s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in-out;
+                }
+
+                @keyframes animate {
+                    0% {
+                        background-image: url("./images/sala-de-estar.jpg");
+                    }
+                    100% {
+                        background-image: url("./images/podcast.jpg");
+                    }
+                }
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    order: 2;
+                    opacity: 0;
                 }
                 .conteudo {
                     color: ${color};
