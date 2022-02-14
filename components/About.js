@@ -33,17 +33,19 @@ export default function About() {
                     object-fit: cover;
                     border-radius: 2px;
                     box-shadow: var(--bs-dark);
+                    order: 2;
                 }
                 .conteudo {
                     height: 100%;
                     display: flex;
                     flex-direction: column;
-                    gap: 1.5em;
-                    padding: 0 1.5em;
+                    gap: 1em;
+                    padding: 0 1em;
+                    order: 3;
                 }
-                @media (max-width: 700.91px) {
+                @media (max-width: 701px) {
                     .conteudo {
-                        grid-row: 1;
+                        order: 1;
                     }
                 }
                 h3 {
@@ -54,14 +56,14 @@ export default function About() {
                 h3::after {
                     content: '';
                     width: 2.8em;
-                    height: .15em;
+                    height: .14em;
                     position: absolute;
-                    top: 1.6em;
+                    top: 1.7em;
                     left: 0;
                     margin-left: 50%;
                     transform: translatex(-50%);
-                    background: var(--clr-dark);
-                    opacity: .5;
+                    background: var(--clr-primary);
+                    opacity: .45;
                 }
                 p {
                     font-size: clamp(1.2em, 1.7vw, 2em)
