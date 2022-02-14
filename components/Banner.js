@@ -4,7 +4,7 @@ export default function Banner() {
             <div className="banner">
                 <div className="container">
                     <h1>O escritório de arquitetura mais desenrolado em linha reta de Pernambuco!</h1>
-                    <img src="./images/cacto.png"></img>
+                    <img src="./images/cacto.png" alt="cacto minimalista"></img>
                 </div>
             </div>
 

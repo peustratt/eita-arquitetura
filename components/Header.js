@@ -5,7 +5,7 @@ export default function Header() {
         <>
             <header>
                 <nav>
-                    <img src="./images/logo.png" className="logo"></img>
+                    <img src="./images/logo.png" className="logo" alt='Eita arquitetos logo'></img>
                     <ul className="links">
                         <a>Início</a>
                         <a>Quem somos</a>
