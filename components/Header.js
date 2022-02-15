@@ -58,6 +58,7 @@ export default function Header(props) {
                 .orcamento {
                     font-size: 20px;
                     margin-left: 10px;
+                    margin-bottom: 2.5px
                 }
                 .nav-toggle {
                     display: none;

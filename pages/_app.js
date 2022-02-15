@@ -23,10 +23,15 @@ function GlobalStyles() {
         --bs: rgba(239,179,134,.15) 0px 4px 24px 0px;
         --bs-dark: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
+        height: 100%;
       }
       body {
         color: var(--clr-dark);
-        font-family: var(--ff-primary)                                   
+        font-family: var(--ff-primary);
+        height: 100%;
+      }
+      #__next {
+        height: 100%;
       }
       ::-webkit-scrollbar {
         width: 6px;
