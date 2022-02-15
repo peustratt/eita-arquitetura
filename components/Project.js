@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Project(props) {
     const isReverse = props.isReverse ? 3 : 1;
@@ -13,7 +14,7 @@ export default function Project(props) {
                         <p>Lorem i et dolore magna aliqucitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                     <div className="img-wrapper">
-                        <img src={props.image} alt="demonstração do projeto"></img>
+                        {/* <img src={props.image} alt="demonstração do projeto"></img> */}
                     </div>
                 </div>
             </Link>
@@ -22,6 +23,8 @@ export default function Project(props) {
                 .container {
                     display: grid;
                     grid-template-columns: repeat(auto-fit, minmax(348px, 1fr));
+                    grid-template-rows: min-content;
+                    grid-auto-rows: minmax(450px, auto);
                     max-width: 1200px;
                     margin: 0 auto;
                     transition: 150ms;
@@ -56,12 +59,13 @@ export default function Project(props) {
                         background-image: url(./images/podcast.jpg);
                     }
                 }
-                img {
+                /*img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    opacity: 0;
-                }
+                    opacity: 1;
+                    display: hidden;
+                }*/
                 .conteudo {
                     color: ${color};
                     background: ${backgroundColor};
@@ -69,7 +73,7 @@ export default function Project(props) {
                     display: flex;
                     flex-direction: column;
                     gap: 1em;
-                    padding: 2em;
+                    padding: 1.8em;
                     order: ${isReverse};
                 }
                 @media (max-width: 695px) {
@@ -95,7 +99,15 @@ export default function Project(props) {
                     opacity: .45;
                 }
                 p {
-                    font-size: clamp(1.2em, 1.7vw, 1.8em)
+                    font-size: clamp(1.2em, 2vw, 1.8em)
+                }
+                @media (min-width: 1200px) {
+                    h3 {
+                        font-size: 2.2em;
+                    }
+                    p {
+                        font-size: 1.8em;
+                    }
                 }
             `}</style>
         </>
