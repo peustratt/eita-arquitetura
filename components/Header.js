@@ -1,18 +1,27 @@
 import Link from 'next/link' 
+import dynamic from 'next/dynamic'
+import { useState } from 'react';
 
-export default function Header() {
+const DynamicSidebar = dynamic(() => import('./Sidebar'))
+
+export default function Header(props) {
+    const [menu, setMenu] = useState(false);
+    const logoLink = props.link ? props.link : '';
+    console.log(menu)
+
     return (
         <>
             <header>
                 <nav>
-                    <img src="./images/logo.png" className="logo" alt='Eita arquitetos logo'></img>
+                    <img src={`${logoLink}./images/logo.png`} className="logo" alt='Eita arquitetos logo'></img>
                     <ul className="links">
                         <a>Início</a>
                         <a>Quem somos</a>
                         <a>Portfólio</a>
                         <a className='orcamento'>Faça um orçamento</a>
                     </ul>
-                    <button className='nav-toggle'></button>
+                    <button className='nav-toggle' onClick={() => setMenu((prev) => !prev)}></button>
+                    <DynamicSidebar menu={menu} setMenu={setMenu} />
                 </nav>
             </header>
             
@@ -55,6 +64,7 @@ export default function Header() {
                     height: 100%;
                     background: black;
                     width: 50px;
+                    z-index: 15;
                 }
 
                 @media (max-width: 600px) {

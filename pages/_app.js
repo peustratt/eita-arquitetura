@@ -45,6 +45,9 @@ function GlobalStyles() {
       button {
         font-family: var(--ff-secondary);
       }
+      .side-bar {
+        transform: translatex(0%);
+      }
     `}</style>
   )
 }
