@@ -1,18 +1,22 @@
+import Link from 'next/link';
+
 export default function Project(props) {
     const isReverse = props.isReverse ? 3 : 1;
     const [color, backgroundColor] = props.isDark ? ['#fff', 'var(--clr-bg-dark)'] : ['--clr-dark', '#fff']
 
     return (
         <>
-            <div className="container">
-                <div className="conteudo">
-                    <h3>Sala de estar</h3>
-                    <p>Lorem i et dolore magna aliqucitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <Link href={`/projetos/${props.link}`}>
+                <div className="container">
+                    <div className="conteudo">
+                        <h3>Sala de estar</h3>
+                        <p>Lorem i et dolore magna aliqucitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div className="img-wrapper">
+                        <img src={props.image} alt="demonstração do projeto"></img>
+                    </div>
                 </div>
-                <div className="img-wrapper">
-                    <img src={props.image} alt="demonstração do projeto"></img>
-                </div>
-            </div>
+            </Link>
 
             <style jsx>{`
                 .container {
@@ -20,6 +24,14 @@ export default function Project(props) {
                     grid-template-columns: repeat(auto-fit, minmax(348px, 1fr));
                     max-width: 1200px;
                     margin: 0 auto;
+                    transition: 150ms;
+                    overflow: hidden;
+                                      box-shadow: 0 .6em 11px rgba(33,33,33,.5);
+                }
+                .container:hover {
+                    opacity: .9;
+                    box-shadow: 0 0 11px rgba(33,33,33,.5);
+                    transform: scale(1.01);
                 }
                 .img-wrapper {
                     order: 2;
