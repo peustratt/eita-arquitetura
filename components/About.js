@@ -19,7 +19,7 @@ export default function About() {
                 }
 
                 .container {
-                    max-width: 1200px;
+                    max-width: 1000px;
                     margin: 0 auto;
                     display: grid;
                     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -43,15 +43,15 @@ export default function About() {
                     padding: 0 1em;
                     order: 3;
                 }
-                @media (max-width: 701px) {
+                /* @media (max-width: 701px) {
                     .conteudo {
                         order: 1;
                     }
-                }
+                } */
                 h3 {
                     position: relative;
                     width: fit-content;
-                    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+                    font-size: clamp(1.2rem, 1.4vw, 1.7rem);
                 }
                 h3::after {
                     content: '';
@@ -66,23 +66,24 @@ export default function About() {
                     opacity: .45;
                 }
                 p {
-                    font-size: clamp(1.2em, 1.7vw, 2em)
+                    font-size: clamp(1em, 1.3vw, 1.3em)
                 }
                 button {
                     padding: .2em 1em;
                     display: flex;
                     align-items: center;
                     width: fit-content;
-                    font-size: clamp(1rem, 1.7vw, 2.5rem);
+                    font-size: clamp(1rem, 1vw, 1.5rem);
                     border: 0;
                     background-color: var(--clr-primary-light);
                     border-radius: 3px;
                     margin-top: auto;
                 }
                 i {
+                    margin-top: 2px;
                     margin-right: 10px;
                     color: #7E7E7E;
-                    font-size: clamp(1.7em, 3.8vw, 3em);
+                    font-size: clamp(1.5em, 3vw, 2em);
                 }
             `}</style>
         </>

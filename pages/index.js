@@ -17,15 +17,16 @@ export default function Home() {
         </Head>
         <Header />
         <Banner />
-        <About />
-        <Portfolio />
-        <Footer />
+        {/* <About /> */}
+        {/* <Portfolio />
+        <Footer /> */}
       </div>
 
       <style jsx>{`
         .app {
           display: grid;
           height: 100%;
+          width: 100%;
         }
       `}</style>
     </>

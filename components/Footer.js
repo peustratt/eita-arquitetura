@@ -18,13 +18,13 @@ export default function Footer() {
                         <h4>Entre em contato conosco: </h4>
                         <div className="contato">
                             <div className="telefones">
-                                <p className="telefones__titulo"></p>
+                                <p className="telefones__titulo">Telefones:</p>
                                 <p>+55 (81) 9 9900-4888</p>
                                 <p>+55 (81) 9 9900-4888</p>
                                 <p>+55 (81) 9 9900-4888</p>
                             </div>
                             <div className="E-mail:">
-                                <p className="email__titulo"></p>
+                                <p className="email__titulo">Email:</p>
                                 <p>eitaarquitetos@gmail.com</p>
                                 <p>eitaarquitetos@eitaarquitetos.com</p>
                             </div>
@@ -49,7 +49,7 @@ export default function Footer() {
                 }
                 .contato {
                     display: grid;   
-                    gap: 2em;
+                    gap: .5em;
                 }
             `}</style>
         </>
