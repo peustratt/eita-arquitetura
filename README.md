@@ -1,5 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-- Link para a aplicação no [Netlify](https://app.netlify.com/sites/eita-arquitetura/overview)
+- Link para a aplicação no [Netlify](https://eita-arquitetura.netlify.app/)
 ## Getting Started
 
 First, run the development server:
