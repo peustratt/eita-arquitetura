@@ -24,8 +24,9 @@ export default function Home() {
 
       <style jsx>{`
         .app {
-          display: grid;
-          height: 100%;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
         }
       `}</style>
     </>

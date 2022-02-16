@@ -3,7 +3,9 @@ export default function About() {
         <>
             <div className="about-us">
                 <div className="container">
-                    <img src='./images/team-photo.jpg' alt="time eita arquitura"></img>
+                    <div className="img-wrapper">
+                        <img src='./images/team-photo.jpg' alt="time eita arquitura"></img>
+                    </div>
                     <div className="conteudo">
                         <h3>Quem somos</h3>
                         <p>Lorem i et dolore magna aliqucitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -19,14 +21,21 @@ export default function About() {
                 }
 
                 .container {
-                    max-width: 1200px;
+                    max-width: 1000px;
+                    min-width: 100px;
                     margin: 0 auto;
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    display: flex;
                     align-items: center;
                     gap: 2em;
                 }
-            
+                @media (max-width: 800px) {
+                    .container {
+                        flex-direction: column-reverse;
+                    }
+                } 
+                .img-wrapper {
+                    flex: 50%
+                }
                 img {
                     width: 100%;
                     height: 100%;
@@ -36,22 +45,24 @@ export default function About() {
                     order: 2;
                 }
                 .conteudo {
+                    flex: 50%;
+                    max-width: 500px;
                     height: 100%;
+                    max-height: fit-content;
                     display: flex;
                     flex-direction: column;
                     gap: 1em;
-                    padding: 0 1em;
+                    padding: 2em;
                     order: 3;
                 }
-                @media (max-width: 701px) {
+                /* @media (max-width: 701px) {
                     .conteudo {
                         order: 1;
                     }
-                }
+                } */
                 h3 {
                     position: relative;
                     width: fit-content;
-                    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
                 }
                 h3::after {
                     content: '';
@@ -65,24 +76,25 @@ export default function About() {
                     background: var(--clr-primary);
                     opacity: .45;
                 }
-                p {
-                    font-size: clamp(1.2em, 1.7vw, 2em)
-                }
                 button {
                     padding: .2em 1em;
                     display: flex;
                     align-items: center;
                     width: fit-content;
-                    font-size: clamp(1rem, 1.7vw, 2.5rem);
+                    font-size: clamp(.8em, 1vw, 2em);
                     border: 0;
                     background-color: var(--clr-primary-light);
                     border-radius: 3px;
                     margin-top: auto;
                 }
+                p {
+                    font-size: clamp(.8em, 2vw, 1.1em); 
+                }
                 i {
+                    margin-top: 2px;
                     margin-right: 10px;
                     color: #7E7E7E;
-                    font-size: clamp(1.7em, 3.8vw, 3em);
+                    font-size: clamp(1.5em, 3vw, 2em);
                 }
             `}</style>
         </>
