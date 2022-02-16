@@ -80,11 +80,11 @@ export default function Project(props) {
                     order: ${isReverse};
                     height: 100%;
                 }
-                @media (max-width: 695px) {
+                /* @media (max-width: 695px) {
                     .conteudo {
                         order: 1;
                     }
-                }
+                } */
                 h3 {
                     position: relative;
                     width: fit-content;

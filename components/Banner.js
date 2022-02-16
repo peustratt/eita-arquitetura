@@ -12,13 +12,12 @@ export default function Banner() {
 
             <style jsx>{`
                 .banner {
+                    justify-content: flex-start;
+                    height: 450px;
                     background: var(--clr-primary-light);
-                    height: 460px;
-                    display: flex;
                     align-items: center;
-                    padding: 1em 2em;
+                    padding: 1rem 2rem;
                     margin-top: 55px;
-                    overflow: hidden;
                 }
                 .container {
                     max-width: 1000px;
@@ -36,7 +35,7 @@ export default function Banner() {
                     text-transform: uppercase;
                 }
                 .img-wrapper {
-                    overflow: hidden;
+                    overflow-x: hidden;
                 }
                 img {
                     margin-left: auto;
