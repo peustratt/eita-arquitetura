@@ -21,11 +21,13 @@ export default function Project(props) {
 
             <style jsx>{`
                 .container {
-                    display: flex;
-                    flex-wrap: wrap;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    grid-auto-rows: repeat(auto-fit, minmax(250px));
                     margin: 0 auto;
                     max-width: 1000px;
                     transition: 150ms;
+                    overflow: hidden;
                     box-shadow: 0 .6em 11px rgba(33,33,33,.5);
                 }
                 .container:hover {
@@ -34,9 +36,6 @@ export default function Project(props) {
                     transform: scale(1.01);
                 }
                 .img-wrapper {
-                    min-width: 250px;
-                    width: 100%;
-                    max-width: 500px;
                     aspect-ratio: 1;
                     order: 2;
                     background-image: url(./images/sala-de-estar.jpg);
@@ -67,9 +66,7 @@ export default function Project(props) {
                     opacity: 1;
                     display: hidden;
                 }*/
-                .conteudo {
-                    min-width: 250px; 
-                    max-width: 500px;
+                .conteudo { 
                     color: ${color};
                     background: ${backgroundColor};
                     display: flex;
@@ -80,15 +77,19 @@ export default function Project(props) {
                     order: ${isReverse};
                     height: 100%;
                 }
-                /* @media (max-width: 695px) {
+                @media (max-width: 599px) {
                     .conteudo {
                         order: 1;
                     }
-                } */
+                }
+                @media (min-width: 800px) {
+                    .conteudo {
+                        padding: 3em;
+                    }
+                }
                 h3 {
                     position: relative;
                     width: fit-content;
-                    font-size: clamp(1.2rem, 1.4vw, 1.7rem);
                 }
                 h3::after {
                     content: '';
@@ -103,7 +104,7 @@ export default function Project(props) {
                     opacity: .45;
                 }
                 p {
-                    font-size: clamp(1em, 1.2vw, 1.3em)
+                    font-size: clamp(.65em, 2vw, 1.1em); 
                 }
             `}</style>
         </>

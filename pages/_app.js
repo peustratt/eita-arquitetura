@@ -25,7 +25,7 @@ function GlobalStyles() {
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
         --fs-h1: 3rem;
         --fs-h2: 2.25rem;
-        --fs-h3: 1.25rem;
+        --fs-h3: .8rem;
         --fs-body: 1rem;
     
         --bs-2: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
@@ -75,6 +75,7 @@ function GlobalStyles() {
         font-size: var(--fs-h2)
       }
       h3 {
+        font-size: var(--fs-h3);
         font-family: var(--ff-secondary);
       }
       button {
